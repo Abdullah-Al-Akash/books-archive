@@ -2,6 +2,10 @@ const totalResult = document.getElementById('total-result');
 const booksContainer = document.getElementById('books-container');
 const errorContainer = document.getElementById('error');
 
+// Spinner Loading:
+const toggleSpinner = displayStyle => {
+        document.getElementById('spinner').classList.add(displayStyle);
+}
 // Search Book:
 document.getElementById('search-btn').addEventListener('click', function () {
         // Clear Old Data
@@ -11,7 +15,6 @@ document.getElementById('search-btn').addEventListener('click', function () {
 
         const searchInput = document.getElementById('search-input');
         const searchText = searchInput.value;
-
         // Fetch Data:
         fetch(`https://openlibrary.org/search.json?q=${searchText}`)
                 .then(res => res.json())
@@ -21,7 +24,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
 
 // Display Books:
 const displayBooks = (books) => {
-
+        // Total Book Results:
         const h6 = document.createElement('h6')
         h6.innerText = 'found ' + books.length + ' books';
         totalResult.appendChild(h6);
