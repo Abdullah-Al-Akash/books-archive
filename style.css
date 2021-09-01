@@ -1,0 +1,5 @@
+.book:hover {
+        cursor: pointer;
+        border: 2px solid orangered;
+        border-radius: 4px;
+}
