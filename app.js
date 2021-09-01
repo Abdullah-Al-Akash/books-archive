@@ -23,10 +23,10 @@ const displayBooks = (books) => {
                                                 <img style="height:400px" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="img-fluid border border-dark border-3" alt="...">
                                         </div>
                                         <div class="card-body">
-                                                <h5 class="card-title">${book.title}</h5>
-                                                <p class="card-text">This is a wider card with supporting text
-                                                        below as a natural lead-in to additional content. This
-                                                        content is a little bit longer.</p>
+                                                <h5 class="card-title text-success">${book.title}</h5>
+                                                <h5 class="card-title">Author's Name:${book.author_name}</h5>
+                                                <p class="card-text">Publishers: ${book.publisher}</p>
+                                                <p class="card-text">First Published: ${book.first_publish_year}</p>
                                         </div>
                                 </div>
                         </div>
