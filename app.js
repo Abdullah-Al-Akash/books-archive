@@ -39,6 +39,7 @@ const displayBooks = (books, totalFound) => {
                 const div = document.createElement('div');
                 div.innerHTML = `
                         <h4 class="text-center text-danger mt-5">No Book Found...</h4>
+                        <h6 class="text-center text-success">Please Write a Book Name!</h6>
                 `;
                 errorContainer.appendChild(div);
                 footer.style.marginTop = '300px';
