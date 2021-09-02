@@ -18,19 +18,26 @@
         <!-- Search Filed Start -->
         <section class="container">
                 <div>
-                        <h1 class="mt-3 text-danger ms-5">Books Archive</h1>
+                        <div class="row">
+                                <div class="col-lg-3">
+                                        <h1 class="mt-5 text-danger ms-5">Books Archive</h1>
+                                </div>
+                                <div class="col-lg-5 d-flex justify-content-center">
+                                        <img class="img-fluid w-25" src="images/logo.png" alt="">
+                                </div>
+                        </div>
                 </div>
-                <div class="input-group mb-3 w-50 mx-auto mt-5">
+
+                <div id="search-section" class="input-group mb-3 mx-auto mt-5">
                         <input id="search-input" type="text" class="form-control" placeholder="Book Name">
                         <button class="btn btn-danger" type="button" id="search-btn">Search</button>
                 </div>
         </section>
         <!-- Spinner Section -->
-        <!-- <section id="spinner" class="justify-content-center align-items-center mt-5 pt-5">
-                <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                </div>
-        </section> -->
+        <div id="spinner" class="spin mx-auto">
+                <img class="h-100 w-100" src="https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif"
+                        alt="">
+        </div>
         <!-- Handle Error -->
         <section id="error">
 
@@ -39,6 +46,12 @@
         <section class="container pb-5">
                 <div id="total-result" class="text-center text-success p-3">
 
+                </div>
+                <div id="title">
+                        <h1 class="pt-5">Search Your Favorite Book</h1>
+                        <h4 class="pt-3">
+                                "A journey of thousand miles begins with a single step"
+                        </h4>
                 </div>
                 <div id="books-container" class="container row row-cols-1 row-cols-md-3 g-4 pt-5">
 

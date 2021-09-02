@@ -3,3 +3,33 @@
         border: 2px solid orangered;
         border-radius: 4px;
 }
+
+.spin {
+        display: none;
+        height: 10rem;
+        width: 16rem;
+}
+
+#title {
+        text-align: center;
+}
+
+#title h1 {
+        color: rgb(241, 228, 224)
+}
+
+#title h4 {
+        color: rgb(230, 222, 217);
+}
+
+@media screen and (min-width: 700px) {
+        #search-section {
+                width: 75%;
+        }
+}
+
+@media screen and (min-width: 800px) {
+        #search-section {
+                width: 40%;
+        }
+}
