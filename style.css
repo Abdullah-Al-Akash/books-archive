@@ -32,6 +32,10 @@
 
 /* Title Style End */
 
+footer {
+        margin-top: 300px;
+}
+
 /* Media Query for Search Field */
 
 @media screen and (min-width: 700px) {
@@ -45,3 +49,5 @@
                 width: 30%;
         }
 }
+
+/* Complete Custom CSS */

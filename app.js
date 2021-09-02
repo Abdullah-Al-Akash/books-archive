@@ -1,5 +1,5 @@
-const totalResult = document.getElementById('total-result');
 const booksContainer = document.getElementById('books-container');
+const totalResult = document.getElementById('total-result');
 const errorContainer = document.getElementById('error');
 // Title Proverb:
 const titleProverb = titleDisplay => {
@@ -11,9 +11,7 @@ const toggleSpinner = displayStyle => {
         document.getElementById('spinner').style.display = displayStyle;
 }
 
-
 // Search Book:
-// document.getElementById('search-btn').addEventListener('click', function ()
 const loadBooks = () => {
         toggleSpinner('block');
         titleProverb('none');
@@ -21,7 +19,7 @@ const loadBooks = () => {
         totalResult.textContent = '';
         booksContainer.textContent = '';
         errorContainer.textContent = '';
-
+        // Search Field
         const searchInput = document.getElementById('search-input');
         const searchText = searchInput.value;
         // Fetch Data:
@@ -42,13 +40,11 @@ const displayBooks = (books, totalFound) => {
                 `;
                 errorContainer.appendChild(div);
         }
-
         else {
                 // Total Book Results:
                 const h5 = document.createElement('h5')
                 h5.innerText = 'Result: found ' + books.length + ' book out of ' + totalFound.numFound;
                 totalResult.appendChild(h5);
-                // totalResult.classList.add(displayCount);
 
                 // use forEach for every single book:
                 books.forEach((book) => {
@@ -61,17 +57,18 @@ const displayBooks = (books, totalFound) => {
                                         </div>
                                         <div class="card-body" style="height: 150px; overflow: hidden">
                                                 <h5 class="card-title text-success"> ${book.title}</h5>
-                                                <h5 class="card-title">Author's Name: ${book.author_name}</h5>
-                                                <p class="card-text">Publishers: ${book.publisher}</p>
+                                                <h5 class="card-title">Author's Name: ${book.author_name ? book.author_name : 'Not Found'}</h5>
+                                                <p class="card-text">Publishers: ${book.publisher ? book.publisher : 'Not Found'}</p>
                                         </div>
                                         <div class="card-footer">
-                                                <small class="text-success">First Published: ${book.first_publish_year}</small>
+                                                <small class="text-success">First Published: ${book.first_publish_year ? book.first_publish_year : 'Not Found'}</small>
                                         </div>
                                 </div>
                         </div>
                 `;
                         booksContainer.appendChild(div);
-                })
+                });
         }
-        toggleSpinner('none')
+        // Spinner Display None After Loading Data:
+        toggleSpinner('none');
 }
