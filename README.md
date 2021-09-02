@@ -13,7 +13,10 @@
 <li>DOM</li>
 <li>ES6</li>
 <br><br>
-<img src="https://i.ibb.co/h1vmm0w/book-archive-ss.png" alt=""> <br> <br>
+<h2>Main UI</h2>
 <img src="https://i.ibb.co/WxPHWxL/books-archive-netlify-app.png" alt="">
 <br><br>
+<h2>After Search</h2>
+<img src="https://i.ibb.co/h1vmm0w/book-archive-ss.png" alt=""> <br> <br>
+
 <h3>Thank You</h3>
