@@ -1,14 +1,22 @@
+/* Style on Book Card Hover */
+
 .book:hover {
         cursor: pointer;
         border: 2px solid orangered;
         border-radius: 4px;
 }
 
+#main-part {
+        margin-top: 190px;
+}
+
 .spin {
         display: none;
-        height: 10rem;
-        width: 16rem;
+        height: 12rem;
+        width: 20rem;
 }
+
+/* Title Style Start */
 
 #title {
         text-align: center;
@@ -22,6 +30,10 @@
         color: rgb(230, 222, 217);
 }
 
+/* Title Style End */
+
+/* Media Query for Search Field */
+
 @media screen and (min-width: 700px) {
         #search-section {
                 width: 75%;
@@ -30,6 +42,6 @@
 
 @media screen and (min-width: 800px) {
         #search-section {
-                width: 40%;
+                width: 30%;
         }
 }
