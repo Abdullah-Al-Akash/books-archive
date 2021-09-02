@@ -1,3 +1,4 @@
+// Start Javascript:
 const booksContainer = document.getElementById('books-container');
 const totalResult = document.getElementById('total-result');
 const errorContainer = document.getElementById('error');
@@ -10,11 +11,12 @@ const titleProverb = titleDisplay => {
 const toggleSpinner = displayStyle => {
         document.getElementById('spinner').style.display = displayStyle;
 }
-
+const footer = document.getElementById('footer');
 // Search Book:
 const loadBooks = () => {
         toggleSpinner('block');
         titleProverb('none');
+        footer.style.marginTop = '300px';
         // Clear Old Data
         totalResult.textContent = '';
         booksContainer.textContent = '';
@@ -39,13 +41,13 @@ const displayBooks = (books, totalFound) => {
                         <h4 class="text-center text-danger mt-5">No Book Found...</h4>
                 `;
                 errorContainer.appendChild(div);
+                footer.style.marginTop = '300px';
         }
         else {
                 // Total Book Results:
                 const h5 = document.createElement('h5')
                 h5.innerText = 'Result: found ' + books.length + ' book out of ' + totalFound.numFound;
                 totalResult.appendChild(h5);
-
                 // use forEach for every single book:
                 books.forEach((book) => {
                         const div = document.createElement('div')
@@ -53,7 +55,7 @@ const displayBooks = (books, totalFound) => {
                         <div class="col book">
                                 <div class="card h-100">
                                         <div class="pt-4 ps-4 pe-4">
-                                                <img style="height:400px" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="img-fluid border border-dark border-3 w-100" alt="...">
+                                                <img style="height:400px" src="https://covers.openlibrary.org/b/id/${book.cover_i ? book.cover_i : 8463228}-M.jpg" class="img-fluid border border-dark border-3 w-100" alt="...">
                                         </div>
                                         <div class="card-body" style="height: 150px; overflow: hidden">
                                                 <h5 class="card-title text-success"> ${book.title}</h5>
@@ -67,8 +69,10 @@ const displayBooks = (books, totalFound) => {
                         </div>
                 `;
                         booksContainer.appendChild(div);
+                        footer.style.marginTop = '0px';
                 });
         }
         // Spinner Display None After Loading Data:
         toggleSpinner('none');
 }
+// Complete Javascript
